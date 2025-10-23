@@ -92,7 +92,7 @@ The image below showcases the core functionality of the expense tracker, includi
 
 ### Expense Dashboard
 
-![Expense Tracker Dashboard Screenshot](assets/[dashboard_screenshot.png])
+![Expense Tracker Dashboard Screenshot](assets/dashboard_screenshot.png)
 
 ---
 Thank you for the opportunity to complete this assessment.
