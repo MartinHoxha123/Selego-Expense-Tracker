@@ -6,9 +6,7 @@ import { sendBudgetAlert } from '../services/emailService.js'; // 1. IMPORT EMAI
 
 const router = express.Router();
 
-// ----------------------------------------------------------------------
-// 2. GET /api/expenses/summary - GET EXPENSE SUMMARY (MUST BE BEFORE /:id)
-// ----------------------------------------------------------------------
+// 2. GET /api/expenses/summary
 router.get('/summary', async (req, res) => {
     try {
         const summary = await Expense.aggregate([
@@ -52,7 +50,7 @@ router.get('/', async (req, res) => {
 // ----------------------------------------------------------------------
 router.post('/', async (req, res) => {
     const { categoryId, amount, description } = req.body;
-    const BUDGET_LIMIT = parseFloat(process.env.BUDGET_LIMIT); // Get limit from .env
+    const BUDGET_LIMIT = parseFloat(process.env.BUDGET_LIMIT); // Get limit from .env.example
 
     // Basic validation
     if (!categoryId || !amount || !description) {

@@ -1,8 +1,7 @@
-// backend/models/Category.js - CORRECTED for ES Modules
+// backend/models/Category.js
 
-import mongoose from 'mongoose'; // Changed from const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-// Schema from the assessment: name: String, createdAt: Date
 const categorySchema = new mongoose.Schema({
     name: {
         type: String,
@@ -18,5 +17,4 @@ const categorySchema = new mongoose.Schema({
 
 const Category = mongoose.model('Category', categorySchema);
 
-// Changed from module.exports = Category;
 export default Category;

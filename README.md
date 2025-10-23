@@ -85,5 +85,14 @@ Key Challenges Encountered:
 Git Secret-Scanning Resolution: The most challenging part was accidentally committing the Brevo API key, which was blocked by GitHub's Push Protection. This was resolved by using git filter-branch to rewrite the entire commit history and then performing a force push (git push --force), ensuring no secrets remain in the public repository history.
 
 State Management: Ensuring the React frontend correctly updated the total spending summaries and displayed budget alerts immediately after an expense was added required careful synchronization of component state.
+---
+## 🖼 Application Screenshots
 
+The image below showcases the core functionality of the expense tracker, including categorized totals and the budget alert system.
+
+### Expense Dashboard
+
+![Expense Tracker Dashboard Screenshot] (assets/[dashboard_screenshot.png])
+
+---
 Thank you for the opportunity to complete this assessment.

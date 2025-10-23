@@ -5,11 +5,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // --- Configuration ---
-// Initialize the Brevo API client
 const apiInstance = new Brevo.TransactionalEmailsApi();
 
 // Set up API Key Authentication
-// NOTE: Ensure your .env file has EMAIL_API_KEY, BUDGET_ALERT_RECIPIENT, and EMAIL_SENDER
 const apiKey = apiInstance.authentications.apiKey;
 apiKey.apiKey = process.env.EMAIL_API_KEY;
 
@@ -22,11 +20,11 @@ const RECIPIENT_EMAIL = process.env.BUDGET_ALERT_RECIPIENT || 'admin@example.com
  * Sends a budget alert email if the total spending exceeds the budget limit.
  * This function sends an email asynchronously and does not block the API response.
  * * @param {number} totalSpent - The current total expense amount.
- * @param {number} limit - The defined budget limit from the .env file.
+ * @param {number} limit - The defined budget limit from the .env.example file.
  */
 export const sendBudgetAlert = async (totalSpent, limit) => {
     if (!process.env.EMAIL_API_KEY) {
-        console.warn("⚠️ Email alert skipped: EMAIL_API_KEY is not set in .env.");
+        console.warn("⚠️ Email alert skipped: EMAIL_API_KEY is not set in .env.example.");
         return;
     }
 

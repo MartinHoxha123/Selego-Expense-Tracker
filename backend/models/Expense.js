@@ -1,8 +1,7 @@
-// backend/models/Expense.js - CORRECTED for ES Modules
+// backend/models/Expense.js
 
-import mongoose from 'mongoose'; // Changed from const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-// Schema from the assessment: categoryId: ObjectId, amount: Number, description: String, createdAt: Date
 const expenseSchema = new mongoose.Schema({
     categoryId: {
         type: mongoose.Schema.Types.ObjectId,
@@ -27,5 +26,4 @@ const expenseSchema = new mongoose.Schema({
 
 const Expense = mongoose.model('Expense', expenseSchema);
 
-// Changed from module.exports = Expense;
 export default Expense;
